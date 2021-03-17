@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Async22 test</h1>
+<script>
+    for (let i = 0; i < 9; i++) {
+        let url = 'http://localhost:8080/user/' + i + '/noreply'
+        fetch(url, {mode: 'no-cors'})
+            .then((response) => {
+                console.log(response.json());
+            })
+            .then((data) => {
+                console.log(data);
+            });
+
+    }
+</script>
+</body>
+</html>
